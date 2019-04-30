@@ -2,6 +2,7 @@ import { data } from '@frontkom/gutenberg-js'
 import { editorSettings } from '../gutenberg/settings'
 import { elementRendered } from './element-ready'
 import setupLaravelFilemanager from '../laravel-filemanager/laravel-filemanager'
+import setupLaravelMediable from '../laravel-mediable/laravel-mediable'
 
 /**
  * Configures the editor according to the provided options object
@@ -59,6 +60,7 @@ function setHeight (height) {
 function setupMedia (options) {
   removeUploadButton()
   if (options.laravelFilemanager) { setupLaravelFilemanager(options.laravelFilemanager) }
+  if (options.laravelMediable) { setupLaravelMediable() }
 }
 
 /**
